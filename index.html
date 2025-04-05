@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교과목 Q&A 게시판</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-8 text-indigo-600">교과목 Q&A 게시판</h1>
+        
+        <!-- 질문 작성 폼 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4">질문하기</h2>
+            <form id="questionForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">교과목 선택</label>
+                    <select id="subject" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                        <option value="">교과목을 선택하세요</option>
+                        <option value="수학">수학</option>
+                        <option value="과학">과학</option>
+                        <option value="영어">영어</option>
+                        <option value="국어">국어</option>
+                        <option value="사회">사회</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">제목</label>
+                    <input type="text" id="title" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">질문 내용</label>
+                    <textarea id="content" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                    질문 등록
+                </button>
+            </form>
+        </div>
+
+        <!-- 질문 목록 -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-semibold mb-4">질문 목록</h2>
+            <div id="questionList" class="space-y-4">
+                <!-- 질문들이 여기에 동적으로 추가됩니다 -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
